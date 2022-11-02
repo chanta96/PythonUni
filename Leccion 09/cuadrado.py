@@ -16,12 +16,13 @@ class Cuadrado(FiguraGeometrica,Color):
         return f'''{FiguraGeometrica.__str__(self)}
 {Color.__str__(self)}'''
 
-    """
-    creacion de getter y setter
-    
-    """
+    def calcular_area(self):
+        return self._alto * self._ancho
+
+
 
 if __name__ == '__main__':
     cuadrado1 = Cuadrado(4,4,'rojo')
     cuadrado1.color = 'violeta'
-    print(cuadrado1.color)
+    print(cuadrado1.calcular_area())
+    
